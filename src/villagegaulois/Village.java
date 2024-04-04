@@ -35,8 +35,8 @@ public class Village {
 
 	public Gaulois trouverHabitant(String nomGaulois) {
 		Gaulois gaulois = null;
-		if (nomGaulois.equals(chef.getNom())) {
-			gaulois = chef;
+		if (this.chef != null && nomGaulois != null && nomGaulois.equals(this.chef.getNom())) {
+			gaulois = this.chef;
 		} else {
 			for (int i = 0; i < nbVillageois; i++) {
 				Gaulois habitant = villageois[i];
